@@ -1,0 +1,5 @@
+;/*FB_PKG_DELIM*/
+
+__d("CometPhotoAlbumCreateQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="7389978187697803"}),null);
+__d("CometPhotoAlbumCreateQuery$Parameters",["CometPhotoAlbumCreateQuery_facebookRelayOperation"],(function(a,b,c,d,e,f){"use strict";a={kind:"PreloadableConcreteRequest",params:{id:b("CometPhotoAlbumCreateQuery_facebookRelayOperation"),metadata:{},name:"CometPhotoAlbumCreateQuery",operationKind:"query",text:null}};e.exports=a}),null);
+__d("CometPhotoAlbumCreateRoot.entrypoint",["CometPhotoAlbumCreateQuery$Parameters","JSResourceForInteraction","WebPixelRatio"],(function(a,b,c,d,e,f,g){"use strict";a={getPreloadProps:function(){return{queries:{CometPhotoAlbumCreateQueryReference:{parameters:b("CometPhotoAlbumCreateQuery$Parameters"),variables:{privacySelectorRenderLocation:"COMET_ALBUM",scale:d("WebPixelRatio").get()}}}}},root:c("JSResourceForInteraction")("CometPhotoAlbumCreateRoot.react").__setRef("CometPhotoAlbumCreateRoot.entrypoint")};e=a;g["default"]=e}),98);
