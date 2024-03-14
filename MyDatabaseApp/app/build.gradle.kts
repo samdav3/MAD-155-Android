@@ -1,21 +1,20 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    //alias(com.android.application)
-    //("kapt") version "1.9.23"
-    //kotlin("kapt") version "1.9.23"
-    //kotlin("jvm")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
+    id("androidx.navigation.safeargs.kotlin")
 }
-val kotlin_version = "1.9.23"
+val kotlinVersion = "1.9.23"
 
 android {
     namespace = "com.example.mydatabaseapp"
     compileSdk = 34
-    buildToolsVersion = "30.0.0"
+    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         applicationId = "com.example.mydatabaseapp"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -53,9 +52,37 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    val room_version = "2.6.0"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:$room_version")
+    // To use Kotlin Symbol Processing (KSP)
+    // ksp("androidx.room:room-compiler:$room_version")
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$room_version")
+
+    // optional - RxJava2 support for Room
+    implementation("androidx.room:room-rxjava2:$room_version")
+
+    // optional - RxJava3 support for Room
+    implementation("androidx.room:room-rxjava3:$room_version")
+
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation("androidx.room:room-guava:$room_version")
+
+    // optional - Test helpers
+    testImplementation("androidx.room:room-testing:$room_version")
+
+    // optional - Paging 3 Integration
+    implementation("androidx.room:room-paging:$room_version")
+
     implementation(fileTree("libs").include("*.jar"))
     //implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
+    //implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -73,7 +100,7 @@ dependencies {
     // Room components
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("com.google.devtools.ksp:symbol-processing-api:1.9.23-1.0.19")
-    implementation("androidx.room:room-compiler:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     androidTestImplementation("androidx.room:room-testing:2.6.1")
 
@@ -84,6 +111,18 @@ dependencies {
     val lifecycle_version = "2.6.2"
     val arch_version = "2.2.0"
 
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
+    // Saved state module for ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
+
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycle_version")
+
     // Kotlin components
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.23")
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
@@ -91,6 +130,7 @@ dependencies {
 
     //DataBinding
     implementation("com.google.devtools.ksp:symbol-processing-api:1.9.23-1.0.19")
-    //kapt("com.android.databinding:compiler:3.2.0-alpha10")
+    kotlin("com.android.databinding:compiler:3.2.0-alpha10")
+
 
     }

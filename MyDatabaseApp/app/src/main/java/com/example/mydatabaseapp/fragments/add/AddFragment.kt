@@ -8,12 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.mydatabaseapp.R
-import com.example.mydatabaseapp.database.User
-import com.example.mydatabaseapp.database.UserViewModel
+import com.example.mydatabaseapp.model.User
+import com.example.mydatabaseapp.viewmodel.UserViewModel
 
 
 class AddFragment : Fragment() {
@@ -34,9 +35,9 @@ class AddFragment : Fragment() {
     }
 
     private fun insertDataToDatabase() {
-        val firstName = view?.findViewById<Button>(R.id.addFirstName_et)?.text.toString()
-        val lastName = view?.findViewById<Button>(R.id.addLastName_et)?.text.toString()
-        val age = view?.findViewById<Button>(R.id.addAge_et)?.text
+        val firstName = view?.findViewById<EditText>(R.id.addFirstName_et)?.text.toString()
+        val lastName = view?.findViewById<EditText>(R.id.addLastName_et)?.text.toString()
+        val age = view?.findViewById<EditText>(R.id.addAge_et)?.text
 
         if (inputCheck(firstName, lastName, age as Editable)){
             //create user object
