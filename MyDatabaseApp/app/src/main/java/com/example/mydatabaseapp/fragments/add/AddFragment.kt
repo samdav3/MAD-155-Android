@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.example.mydatabaseapp.R
 import com.example.mydatabaseapp.model.User
@@ -20,14 +21,16 @@ import com.example.mydatabaseapp.viewmodel.UserViewModel
 class AddFragment : Fragment() {
 
     private lateinit var mUserViewModel: UserViewModel
+    //private  lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         val view = inflater.inflate(R.layout.fragment_add, container, false)
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
         view.findViewById<Button>(R.id.addBtn).setOnClickListener {
             insertDataToDatabase()
         }
@@ -46,7 +49,7 @@ class AddFragment : Fragment() {
             mUserViewModel.addUser(user)
             Toast.makeText(requireContext(), "Successfully Added!", Toast.LENGTH_LONG).show()
             //Navigate Back
-            findNavController().navigate(R.id.action_addFragment_to_listFragment)
+            this.findNavController().navigate(R.id.action_addFragment_to_listFragment)
         }else{
             Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_LONG).show()
         }

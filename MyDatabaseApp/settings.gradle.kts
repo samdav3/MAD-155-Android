@@ -1,3 +1,5 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode.*
+
 pluginManagement {
     repositories {
         google {
@@ -9,15 +11,18 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    @Suppress("UnstableApiUsage", "UnstableApiUsage")
+    repositoriesMode.set(PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
         mavenLocal()
         maven("https://www.jitpack.io")
+        gradlePluginPortal()
     }
 }
 
