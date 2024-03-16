@@ -4,26 +4,50 @@ import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.Icon
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationManagerCompat
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
-    private var notificationManager: NotificationManager? = null
-    private var channelID = "com.example.MAD-155Local_Notifications"
+    private lateinit var notificationManager: NotificationManager
+    private var channelID = "com.example.MAD-155_Local_Notifications"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //create notify service
+        notificationManager = this.getSystemService(
+            NOTIFICATION_SERVICE
+        )as NotificationManager
+
+        areNotificationsEnabled(this, channelID)
+
         val button1: Button = findViewById(R.id.button)
         button1.setOnClickListener {
             //send notification
             sendNotification("Example Notification", "This is an example")
+            if (areNotificationsEnabled(this, channelID)){
+                val snackbar = Snackbar.make(it, "You need to enable App Notifications", Snackbar.LENGTH_LONG)
+                snackbar.setAction("Open Settings") {
+                    Intent(
+                        android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                        Uri.fromParts("package", packageName, null)
+                    )
+                }
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+            }
         }
 
         //create default channel
@@ -32,13 +56,9 @@ class MainActivity : AppCompatActivity() {
             "Local Notify Default"
         )
 
-        //create notify surface
-        notificationManager = getSystemService(
-            NOTIFICATION_SERVICE
-        )as NotificationManager
     }
 
-    fun sendNotification(title: String, content: String){
+    private fun sendNotification(title: String, content: String){
         val notificationID = 101
         val icon: Icon = Icon.createWithResource(this, android.R.drawable.ic_dialog_info)
         val resultIntent = Intent(this, ResultActivity::class.java)
@@ -56,10 +76,10 @@ class MainActivity : AppCompatActivity() {
             .setNumber(notificationID)
             .build()
 
-        notificationManager?.notify(notificationID, notification)
+        notificationManager.notify(notificationID, notification)
     }
 
-    fun createNotificationChannel(id: String, name: String){
+    private fun createNotificationChannel(id: String, name: String){
         val importance = NotificationManager.IMPORTANCE_DEFAULT
         val channel = NotificationChannel(id, name, importance).apply {
             enableLights(true)
@@ -68,6 +88,19 @@ class MainActivity : AppCompatActivity() {
             vibrationPattern = longArrayOf(108, 280, 308)
         }
 
-        notificationManager?.createNotificationChannel(channel)
+        notificationManager.createNotificationChannel(channel)
+    }
+
+    private fun areNotificationsEnabled(context: Context, channelID: String?): Boolean {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+        if (!TextUtils.isEmpty(channelID)){
+            val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            val channel = manager.getNotificationChannel(channelID)
+            return channel.importance == NotificationManager.IMPORTANCE_NONE
+        }
+            false
+    }else{
+        NotificationManagerCompat.from(context).areNotificationsEnabled()
+        }
     }
 }
