@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             NOTIFICATION_SERVICE
         )as NotificationManager
 
-        areNotificationsEnabled(this, channelID)
+        val areNotificationsEnabled = areNotificationsEnabled(this, channelID)
 
         val button1: Button = findViewById(R.id.button)
         button1.setOnClickListener {
@@ -51,9 +51,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         //create default channel
-        createNotificationChannel(
-            channelID,
-            "Local Notify Default"
+        "Local Notify Default".createNotificationChannel(
+            channelID
         )
 
     }
@@ -79,9 +78,9 @@ class MainActivity : AppCompatActivity() {
         notificationManager.notify(notificationID, notification)
     }
 
-    private fun createNotificationChannel(id: String, name: String){
+    private fun String.createNotificationChannel(channelID: String?){
         val importance = NotificationManager.IMPORTANCE_DEFAULT
-        val channel = NotificationChannel(id, name, importance).apply {
+        val channel = NotificationChannel(channelID, this, importance).apply {
             enableLights(true)
             lightColor = Color.RED
             enableVibration(true)
