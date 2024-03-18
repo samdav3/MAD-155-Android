@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.view.menu.ListMenuItemView
+import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -18,14 +20,16 @@ class ListAdapter(private var userList: List<User>): RecyclerView.Adapter<ListAd
 
     private  lateinit var navController: NavController
     private lateinit var navHostFragment: NavHostFragment
+    //lateinit var view: View
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        init{
-            itemView.setOnClickListener {
+        var item = itemView.findViewById<ListMenuItemView>(R.id.rowLayout)
+        init {
+            item.setOnClickListener {
                 it.findNavController().navigate(R.id.action_listFragment_to_updateFragment)
             }
-            //findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.rowLayout)
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
