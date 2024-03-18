@@ -61,7 +61,7 @@ class UpdateFragment : Fragment() {
         val lastName = view?.findViewById<EditText>(R.id.updateLastName_et)?.text.toString()
         val age = Integer.parseInt(view?.findViewById<EditText>(R.id.updateAge_et)?.text.toString())
 
-        if (inputCheck(firstName, lastName, requireView().findViewById(R.id.updateAge_et))){
+        if (inputCheck(firstName, lastName, age)){
             //Create User Object
             val updateUser = User(args.currentUser.id, firstName, lastName, age)
             // Update Current User
@@ -75,8 +75,8 @@ class UpdateFragment : Fragment() {
         }
     }
 
-    private fun inputCheck(firstName: String, lastName: String, age: Editable): Boolean{
-        return !(TextUtils.isEmpty(firstName) && TextUtils.isEmpty(lastName) && age.isEmpty())
+    private fun inputCheck(firstName: String, lastName: String, age: Int): Boolean{
+        return !(TextUtils.isEmpty(firstName) && TextUtils.isEmpty(lastName) && TextUtils.isEmpty(age.toString()))
     }
 
     @Deprecated("Deprecated in Java", ReplaceWith(
