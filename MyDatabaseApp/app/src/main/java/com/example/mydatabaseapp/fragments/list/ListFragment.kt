@@ -16,6 +16,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mydatabaseapp.MainActivity
 import com.example.mydatabaseapp.R
 import com.example.mydatabaseapp.model.User
 import com.example.mydatabaseapp.viewmodel.UserViewModel
@@ -26,9 +27,6 @@ class ListFragment : Fragment() {
 
     private lateinit var mUserViewModel: UserViewModel
 
-
-    @Suppress("DEPRECATION")
-    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,6 +34,7 @@ class ListFragment : Fragment() {
 
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_list, container, false)
+
 
         //RecyclerView
         val userList = arrayListOf<User>()
@@ -51,30 +50,21 @@ class ListFragment : Fragment() {
             adapter.setData(user)
         }
 
-
-
         view.findViewById<FloatingActionButton>(R.id.floatingActionButton).setOnClickListener {
             it.findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
+
         setHasOptionsMenu(true)
         return view.rootView
 
     }
 
 
-    @Deprecated(
-        "Deprecated in Java",
-        ReplaceWith(
-            "inflater.inflate(R.menu.delete_menu, menu)",
-            "com.example.mydatabaseapp.R",
-        ),
-    )
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.delete_menu, menu)
+        return super.onCreateOptionsMenu(menu, inflater)
     }
 
-    @Suppress("DEPRECATION")
-    @Deprecated("Deprecated in Java")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.menu_delete){
             deleteAllUsers()
@@ -88,6 +78,7 @@ class ListFragment : Fragment() {
         builder.setPositiveButton("Yes"){ _, _ ->
             mUserViewModel.deleteAllUsers()
             Toast.makeText(requireContext(), "Successfully removed everything", Toast.LENGTH_SHORT).show()
+
         }
         builder.setNegativeButton("No"){ _, _ -> }
         builder.setTitle("Delete everything?")
