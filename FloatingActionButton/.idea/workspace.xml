@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad17d8f7-e50e-4bcc-8006-3439786781fc" name="Changes" comment="" />
+    <list default="true" id="ad17d8f7-e50e-4bcc-8006-3439786781fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../MyDatabaseApp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/java/com/example/realtimedatabase/ItemFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/java/com/example/realtimedatabase/MyItemRecyclerViewAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/java/com/example/realtimedatabase/Person.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/java/com/example/realtimedatabase/placeholder/PlaceholderContent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/res/layout/fragment_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/res/layout/fragment_item_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyDatabaseApp/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../MyDatabaseApp/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyDatabaseApp/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyDatabaseApp/gradle/libs.versions.toml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +28,29 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="2d1cKBgRIrkOPuSBRFOtcu9BZNO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -30,6 +65,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/student/Library/Mobile Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-155 Android/FloatingActionButton",
     "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
