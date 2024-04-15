@@ -5,20 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad17d8f7-e50e-4bcc-8006-3439786781fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../MyDatabaseApp/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/java/com/example/realtimedatabase/ItemFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/java/com/example/realtimedatabase/MyItemRecyclerViewAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/java/com/example/realtimedatabase/Person.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/java/com/example/realtimedatabase/placeholder/PlaceholderContent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/res/layout/fragment_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/res/layout/fragment_item_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RealtimeDatabase/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/res/layout/fragment_add_entry.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/res/layout/fragment_add_entry2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyDatabaseApp/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../MyDatabaseApp/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyDatabaseApp/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyDatabaseApp/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRealtimeDatabase/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/java/com/example/myrealtimedatabase/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/java/com/example/myrealtimedatabase/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/java/com/example/myrealtimedatabase/MyModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/java/com/example/myrealtimedatabase/MyModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/res/layout/row_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/res/layout/row_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRealtimeDatabase/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyRealtimeDatabase/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyRealtimeDatabase/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,27 +49,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2d1cKBgRIrkOPuSBRFOtcu9BZNO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/student/Library/Mobile Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-155 Android/FloatingActionButton",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/student/Library/Mobile Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-155 Android/FloatingActionButton&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
