@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainO"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".order.PageOneOrderFragment">
+
+    <TextView
+        android:id="@+id/accountTitle"
+        android:layout_width="413dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif"
+        android:text="New Order"
+        android:textAlignment="center"
+        android:textColor="#643200"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="223dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:hint="Pickup Date"
+        android:textColor="#643200"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="46dp"
+        android:text="Select Date:"
+        android:textColor="#643200"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:text="Select Size:"
+        android:textColor="#643200"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/chipGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewSize"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate">
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16oz"
+            android:textColor="#643200"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20oz"
+            android:textColor="#643200"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24oz"
+            android:textColor="#643200"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCoffee"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="335dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAmericano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Americano"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cold Brew"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipLatte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latte"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cappucino"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDecaf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decaf"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFlavor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="335dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipVanilla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vanilla"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCaramel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caramel"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHaz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hazelnut"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blueberry"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMocha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mocha"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salted Caramel"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewFlavorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Select Flavor:"
+        android:textColor="#643200"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <TextView
+        android:id="@+id/textViewCoffeeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Select Coffee:"
+        android:textColor="#643200"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <TextView
+        android:id="@+id/textViewCreamTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="160dp"
+        android:text="Select Cream:"
+        android:textColor="#643200"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="335dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipWM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whole Milk"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skim Milk"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipOat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oat Milk"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCoco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coconut Milk"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heavy Cream"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHalf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/half_half"
+            android:textColor="#643200"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="301dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="76dp"
+        android:background="#643200"
+        android:padding="10dp"
+        android:text="Submit Order"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
